@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokémons Lendários - Box Model Explicado</title>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-wrap: wrap;
+    }
+
+    .pokemon-card {
+        border: 2px, solid, #ffffff;
+        border-color: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.26);
+        width: 200px;
+        height: 290px;
+        text-align: center;
+        padding: 15px;
+        margin: 10px;
+        transition: transform 0.3s;
+    }
+
+    .pokemon-img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: 2px, dotted, #ffffff;
+        background-color: rgba(255, 255, 255, 0.205);
+    }
+
+    .pokemon-name {
+        margin: 10px 0;
+        font-size: 22px;
+        font-weight: bold;
+        border: 2px, dotted, #ffffff;
+        border-radius: 10px;
+        color: #ffffff;
+        background-color: rgba(255, 255, 255, 0.205);
+    }
+
+    .pokemon-type {
+        font-size: 14px;
+        color: #ffffff;
+        font-weight: 500;
+        background-color: rgba(255, 255, 255, 0.205);
+        border-radius: 10px;
+    }
+    
+    .pokemon-card.arceus{
+        color: #000000;
+    }
+    .pokemon-name.arceus{
+        color: #000000;
+    }
+    .pokemon-type.arceus{
+        color: #000000;
+    }
+
+    .pokemon-card.mewtwo {
+        background: linear-gradient(to bottom, #491755, #dd41b6); 
+    }
+
+    .pokemon-card.lugia {
+        background: linear-gradient(to bottom, #82e9be, #8f66db); 
+    }
+
+    .pokemon-card.rayquaza {
+        background: linear-gradient(to bottom, #66d96c, #11ffeb); 
+    }
+
+    .pokemon-card.arceus {
+        background: linear-gradient(to bottom, #e1d8d4, #0000004d); 
+    }
+
+    .pokemon-card:hover {
+        transform: scale(1.05);
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div class="pokemon-card mewtwo">
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png" alt="Mewtwo" class="pokemon-img">
+    <h2 class="pokemon-name">Mewtwo</h2>
+    <div class="pokemon-type">🧠 Tipo: Psíquico</div>
+  </div>
+
+  <div class="pokemon-card lugia">
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/249.png" alt="Lugia" class="pokemon-img">
+    <h2 class="pokemon-name">Lugia</h2>
+    <div class="pokemon-type">🌊 Tipo: Psíquico / Voador</div>
+  </div>
+
+  <div class="pokemon-card rayquaza">
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/384.png" alt="Rayquaza" class="pokemon-img">
+    <h2 class="pokemon-name">Rayquaza</h2>
+    <div class="pokemon-type">🌪️ Tipo: Dragão / Voador</div>
+  </div>
+
+  <div class="pokemon-card arceus">
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/493.png" alt="Arceus" class="pokemon-img">
+    <h2 class="pokemon-name arceus">Arceus</h2>
+    <div class="pokemon-type arceus">✨ Tipo: Normal (Multi-Tipo)</div>
+  </div>
+
+</body>
+</html>
